@@ -1,0 +1,22 @@
+{
+  "name": "ciclo-chatbot",
+  "displayName": "Ciclo Chatbot IA + WhatsApp",
+  "version": "0.1.0",
+  "description": "Orquestra o ciclo completo de um chatbot com IA no WhatsApp: descoberta, arquitetura, banco escalável, camada de IA, providers modulares (API oficial da Meta e outros), implementação, testes e evals, segurança, deploy em PaaS, conexão com a Meta e operação, usando as melhores skills, agentes e MCPs da comunidade em cada fase.",
+  "author": {
+    "name": "Artur Pellicioli",
+    "url": "https://github.com/ArturNicolaiewskyPellicioli"
+  },
+  "license": "MIT",
+  "keywords": [
+    "chatbot",
+    "whatsapp",
+    "whatsapp-cloud-api",
+    "llm",
+    "rag",
+    "postgresql",
+    "pgvector",
+    "orquestracao",
+    "deploy"
+  ]
+}

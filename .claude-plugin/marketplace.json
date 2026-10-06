@@ -1,0 +1,27 @@
+{
+  "name": "ciclo-chatbot-marketplace",
+  "owner": {
+    "name": "Artur Pellicioli",
+    "url": "https://github.com/ArturNicolaiewskyPellicioli"
+  },
+  "description": "Plugins para criar chatbots com IA no WhatsApp, da arquitetura do banco à operação, orquestrando as melhores peças da comunidade.",
+  "allowCrossMarketplaceDependenciesOn": ["claude-plugins-official"],
+  "plugins": [
+    {
+      "name": "ciclo-chatbot",
+      "source": "./plugins/ciclo-chatbot",
+      "description": "Orquestra o ciclo completo de um chatbot com IA no WhatsApp: descoberta, arquitetura, banco escalável, IA, providers modulares, implementação, testes, segurança, deploy em PaaS, conexão com a Meta e operação.",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": ["chatbot", "whatsapp", "llm", "postgresql", "pgvector", "deploy"]
+    },
+    {
+      "name": "ciclo-chatbot-essenciais",
+      "source": "./plugins/ciclo-chatbot-essenciais",
+      "description": "Opcional: instala de uma vez as peças núcleo da comunidade (superpowers, feature-dev, pr-review-toolkit, security-guidance, commit-commands).",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": ["bundle", "superpowers", "code-review", "security"]
+    }
+  ]
+}

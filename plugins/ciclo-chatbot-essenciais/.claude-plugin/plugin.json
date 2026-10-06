@@ -1,0 +1,18 @@
+{
+  "name": "ciclo-chatbot-essenciais",
+  "displayName": "Ciclo Chatbot: essenciais da comunidade",
+  "version": "0.1.0",
+  "description": "Pacote opcional que instala, como dependências, as peças núcleo da comunidade usadas pelo ciclo-chatbot e publicadas no marketplace oficial da Anthropic: superpowers, feature-dev, pr-review-toolkit, security-guidance e commit-commands.",
+  "author": {
+    "name": "Artur Pellicioli",
+    "url": "https://github.com/ArturNicolaiewskyPellicioli"
+  },
+  "license": "MIT",
+  "dependencies": [
+    "superpowers@claude-plugins-official",
+    "feature-dev@claude-plugins-official",
+    "pr-review-toolkit@claude-plugins-official",
+    "security-guidance@claude-plugins-official",
+    "commit-commands@claude-plugins-official"
+  ]
+}

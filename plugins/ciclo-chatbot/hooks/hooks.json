@@ -1,0 +1,29 @@
+{
+  "description": "Ciclo Chatbot: retoma o contexto do ciclo no início da sessão e roda o Squawk em migrações SQL gravadas pelo Claude.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/contexto_ciclo.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/squawk_migracoes.py\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
