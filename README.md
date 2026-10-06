@@ -13,11 +13,35 @@ No Claude Code:
 
 ```
 /plugin marketplace add ArturNicolaiewskyPellicioli/chatbot-plugin
+/plugin marketplace add anthropics/claude-plugins-official
 /plugin install ciclo-chatbot@ciclo-chatbot-marketplace
 /plugin install ciclo-chatbot-essenciais@ciclo-chatbot-marketplace
 ```
 
+O marketplace oficial (`claude-plugins-official`) é necessário para o `ciclo-chatbot-essenciais`, cujas dependências vêm dele. Se ele já estiver adicionado, o segundo comando pode ser pulado.
+
 Para testar localmente a partir de um clone: `/plugin marketplace add ./caminho/para/o/clone`.
+
+## Usar no Claude Code na web (sessões na nuvem)
+
+O comando `/plugin` não está disponível nas sessões na nuvem. Declare os plugins no `.claude/settings.json` do repositório do projeto, e cada nova sessão os instala ao iniciar:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "ciclo-chatbot-marketplace": {
+      "source": { "source": "github", "repo": "ArturNicolaiewskyPellicioli/chatbot-plugin" }
+    },
+    "claude-plugins-official": {
+      "source": { "source": "github", "repo": "anthropics/claude-plugins-official" }
+    }
+  },
+  "enabledPlugins": {
+    "ciclo-chatbot@ciclo-chatbot-marketplace": true,
+    "ciclo-chatbot-essenciais@ciclo-chatbot-marketplace": true
+  }
+}
+```
 
 ## Instalar no Cowork
 
